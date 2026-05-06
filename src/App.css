@@ -1,0 +1,228 @@
+.contenedor-app {
+  width: min(1040px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0;
+}
+
+.encabezado {
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.subtitulo {
+  margin: 0 0 8px;
+  color: #0f766e;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.encabezado h1 {
+  margin: 0;
+  color: #111827;
+  font-size: 42px;
+  line-height: 1.1;
+}
+
+.panel {
+  padding: 24px;
+  border: 1px solid #d9e2ec;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+
+.formulario-tarea {
+  display: grid;
+  gap: 18px;
+}
+
+.grupo-campo {
+  display: grid;
+  gap: 8px;
+  text-align: left;
+}
+
+.grupo-campo label {
+  color: #1f2937;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.grupo-campo input,
+.grupo-campo textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  color: #111827;
+  background: #f8fafc;
+  font: inherit;
+  padding: 12px 14px;
+  outline: none;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s;
+}
+
+.grupo-campo textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.grupo-campo input:focus,
+.grupo-campo textarea:focus {
+  border-color: #0f766e;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.16);
+}
+
+.acciones-formulario,
+.acciones-tarea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.boton {
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 10px 14px;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s;
+}
+
+.boton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+.boton-principal {
+  color: #ffffff;
+  background: #0f766e;
+}
+
+.boton-secundario {
+  color: #334155;
+  background: #e2e8f0;
+}
+
+.boton-estado {
+  color: #1e3a8a;
+  background: #dbeafe;
+}
+
+.boton-eliminar {
+  color: #ffffff;
+  background: #dc2626;
+}
+
+.lista-tareas {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.lista-vacia {
+  border: 1px dashed #94a3b8;
+  border-radius: 8px;
+  color: #64748b;
+  background: #ffffff;
+  padding: 28px;
+  text-align: center;
+}
+
+.tarea {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: start;
+  border: 1px solid #d9e2ec;
+  border-left: 6px solid #f59e0b;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 20px;
+  text-align: left;
+}
+
+.tarea.completada {
+  border-left-color: #16a34a;
+  background: #f0fdf4;
+}
+
+.tarea.completada h3,
+.tarea.completada p {
+  color: #64748b;
+  text-decoration: line-through;
+}
+
+.contenido-tarea {
+  display: grid;
+  gap: 8px;
+}
+
+.etiqueta-estado {
+  width: fit-content;
+  border-radius: 999px;
+  color: #92400e;
+  background: #fef3c7;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+
+.completada .etiqueta-estado {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.contenido-tarea h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 22px;
+}
+
+.contenido-tarea p {
+  margin: 0;
+  color: #475569;
+}
+
+.acciones-tarea {
+  justify-content: flex-end;
+  min-width: 300px;
+}
+
+@media (max-width: 720px) {
+  .contenedor-app {
+    width: min(100% - 20px, 1040px);
+    padding: 28px 0;
+  }
+
+  .encabezado h1 {
+    font-size: 32px;
+  }
+
+  .panel,
+  .tarea {
+    padding: 18px;
+  }
+
+  .tarea {
+    grid-template-columns: 1fr;
+  }
+
+  .acciones-tarea {
+    justify-content: flex-start;
+    min-width: 0;
+  }
+
+  .boton {
+    width: 100%;
+  }
+}
