@@ -18,6 +18,7 @@ function obtenerTareasGuardadas() {
 function App() {
   const [tareas, setTareas] = useState(obtenerTareasGuardadas)
   const [tareaEditando, setTareaEditando] = useState(null)
+  const [filtro, setFiltro] = useState('todas')
 
   //Guardar las tareas en el localStorage 
   useEffect(() => {
@@ -94,6 +95,8 @@ function App() {
 
       <ListaTareas
         tareas={tareas}
+        filtro={filtro}
+        alCambiarFiltro={setFiltro}
         alCambiarEstado={cambiarEstadoTarea}
         alEditar={setTareaEditando}
         alEliminar={eliminarTarea}
